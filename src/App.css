@@ -1,40 +1,98 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+  justify-items: center;
 }
 
 .App h1 {
-  font-family: "East Sea Dokdo", cursive;
-  font-size: 5rem;
+  /*font-family: "East Sea Dokdo", cursive;*/
+  color: #fff;
+  font-size: 4rem;
   text-align: center;
-}
-
-.todo {
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  width: 400px;
-  height: 60px;
-  background-color: blanchedalmond;
-  border: 0.5px rgba(66, 66, 66, 0.6) solid;
-  font-size: 20px;
+  margin: 1rem;
+  text-decoration: line-through;
+  text-decoration-color: rgb(204, 204, 204);
+  text-decoration-thickness: 3px;
 }
 
 .AddTodo input {
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;
+  padding-left: 3rem;
 }
 
-.TodoList ul {
-  list-style-type: none;
+.todo {
+  padding: 1.5rem 2rem;
+  margin-top: 20px;
+  width: 500px;
+  min-height: 80px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  max-width: 75%;
+}
+
+.todo-item .text {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Buttons */
+
+.completed-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+.circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cross {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  top: 50%;
+}
+
+.line-1 {
+  transform: rotate(45deg);
+}
+
+.line-2 {
+  transform: rotate(-45deg);
 }
