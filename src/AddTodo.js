@@ -8,7 +8,7 @@ function AddTodo(props) {
   function handleSubmit(event){
     event.preventDefault();
     props.setTodos([
-      inputText,
+      {id: Math.random()*1000 , text: inputText, completed: false},
       ...props.todos
     ]);
     setInputText("");
