@@ -15,7 +15,7 @@ function AddTodo(props) {
   }
 
   return (
-    <div className="AddTodo todo">
+    <div className="AddTodo box">
       <form onSubmit={handleSubmit}>
         <input
           value={inputText}
@@ -25,6 +25,26 @@ function AddTodo(props) {
           onChange={updateInputText}
         />
       </form>
+      <div className="selection">
+        <button
+          className={`${props.filter === "all" ? "selected" : "" }`}
+          onClick={() => props.setFilter("all")}
+        >
+          All
+        </button>
+        <button
+          className={`${props.filter === "active" ? "selected" : "" }`}
+          onClick={() => props.setFilter("active")}
+        >
+          Active
+        </button>
+        <button
+          className={`${props.filter === "completed" ? "selected" : "" }`}
+          onClick={() => props.setFilter("completed")}
+        >
+          Completed
+        </button>  
+      </div>
     </div>
   );
 }

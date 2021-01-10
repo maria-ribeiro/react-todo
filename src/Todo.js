@@ -1,5 +1,4 @@
 function Todo(props) {
-
   function handleComplete() {
     props.setTodos(props.todos.map( item => {
       if( item.id === props.todo.id ) {
@@ -15,10 +14,13 @@ function Todo(props) {
   }
 
   return (
-    <div className="Todo todo">
+    <div className="Todo box">
       <div className={`todo-item ${props.todo.completed ? "completed" : "" }`}>
         <button className="completed-btn" onClick={handleComplete}>
-          <span className="circle"></span>
+          <div className="circle">
+            <div className="check-1"></div>
+            <div className="check-2"></div>
+          </div>
         </button>
         <div className="text">{props.todo.text}</div>
       </div>

@@ -7,7 +7,7 @@
 
 .App h1 {
   /*font-family: "East Sea Dokdo", cursive;*/
-  color: #fff;
+  color: white;
   font-size: 4rem;
   text-align: center;
   margin: 1rem;
@@ -17,19 +17,20 @@
 }
 
 .AddTodo form {
-  width: 85%;
+  width: 55%;
 }
 
 .AddTodo input {
   width: 100%;
   background-color: transparent;
   border: none;
+  outline: none;
   font-size: 22px;
   font-family: "Roboto", sans-serif;
   padding-left: 3rem;
 }
 
-.todo {
+.box {
   padding: 1.5rem 2rem;
   margin-top: 20px;
   width: 600px;
@@ -78,8 +79,28 @@
 }
 
 .todo-item.completed .circle {
-  background: rgb(156, 215, 255);
-  border: none;
+  position: relative;
+  border-color: rgb(93, 165, 10);
+  transform: rotate(-45deg);
+}
+
+.todo-item.completed .circle .check-1 {
+  position: absolute;
+  width: 14px;
+  height: 1px;
+  background-color: rgb(93, 165, 10);
+  top: 12px;
+  left: 5px;
+}
+
+.todo-item.completed .circle .check-2 {
+  position: absolute;
+  background-color: rgb(93, 165, 10);
+  width: 1px;
+  height: 5px;
+  top: 8px;
+  left: 5px;
+  transform: rotate(10deg);
 }
 
 .delete-btn {
@@ -109,4 +130,25 @@
 
 .line-2 {
   transform: rotate(-45deg);
+}
+
+.selection {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selection button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 18px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.selection button.selected {
+  border: 1px solid #ccc;
 }
