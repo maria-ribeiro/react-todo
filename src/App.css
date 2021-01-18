@@ -6,13 +6,12 @@
 }
 
 .App h1 {
-  /*font-family: "East Sea Dokdo", cursive;*/
   color: white;
   font-size: 4rem;
   text-align: center;
-  margin: 1rem;
+  margin: 2rem;
   text-decoration: line-through;
-  text-decoration-color: rgb(204, 204, 204);
+  text-decoration-color: white;
   text-decoration-thickness: 3px;
 }
 
@@ -35,10 +34,10 @@
   margin-top: 20px;
   width: 600px;
   min-height: 80px;
-  background-color: white;
+  background: white;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 32px 0px;
   font-size: 22px;
   display: flex;
   align-items: center;
