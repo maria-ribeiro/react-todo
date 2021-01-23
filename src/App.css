@@ -7,7 +7,7 @@
 
 .App h1 {
   color: white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   margin: 2rem;
   text-decoration: line-through;
@@ -16,7 +16,7 @@
 }
 
 .AddTodo form {
-  width: 55%;
+  width: 85%;
 }
 
 .AddTodo input {
@@ -31,13 +31,10 @@
 
 .box {
   padding: 1.5rem 2rem;
-  margin-top: 20px;
-  width: 600px;
+  width: 500px;
   min-height: 80px;
   background: white;
-  border-radius: 20px;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 32px 0px;
+  border-bottom: 1px rgba(187, 187, 187, 0.5) solid;
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -131,8 +128,19 @@
   transform: rotate(-45deg);
 }
 
+/* Bottom */
+
+.Bottom.box {
+  justify-content: space-between;
+  border: none;
+}
+
+.count {
+  font-size: 18px;
+}
+
 .selection {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
@@ -149,5 +157,5 @@
 }
 
 .selection button.selected {
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
 }
